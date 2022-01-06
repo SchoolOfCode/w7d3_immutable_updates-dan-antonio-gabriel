@@ -1,7 +1,11 @@
 // Arrays:
 
 // Immutably add an item to the end of an array
-export function addToEnd(array, item) {}
+export function addToEnd(array, item) {
+  // spread operator
+  const newArray = [...array, item];
+  return newArray;
+}
 
 // Immutably add an item to the beginning of an array
 export function addToBeginning(array, item) {}
