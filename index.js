@@ -9,18 +9,21 @@ export function addToEnd(array, item) {
 
 // Immutably add an item to the beginning of an array
 export function addToBeginning(array, item) {
-    const newArray = [item, ...array];
-    return newArray;
+  const newArray = [item, ...array];
+  return newArray;
 }
 
 // Immutably insert an item at a specific position/index within an array
 export function insertItem(array, item, index) {
-  const originalArray = [...array.slice(0, index), item, ...array.slice(index)]
+  const originalArray = [...array.slice(0, index), item, ...array.slice(index)];
   return originalArray;
 }
 
 // Immutably replace an item at a specific position/index within an array
-export function replaceItem(array, item, index) {}
+export function replaceItem(array, item, index) {
+  const newArray = [...array.slice(0, index), item, ...array.slice(index + 1)];
+  return newArray;
+}
 
 // Immutably remove an item at a specific position/index within an array
 export function removeItem(array, index) {}
